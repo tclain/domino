@@ -1,0 +1,17 @@
+{
+  "name": "domino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^17.0.0",
+    "systemjs": "^0.19.40",
+    "typescript": "^2.0.8"
+  }
+}

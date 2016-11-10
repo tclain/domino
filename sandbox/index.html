@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .container{
+            margin:30px auto;
+            width:80%;
+            padding:10px;
+        }
+        </style>
+        <script src="../node_modules/systemjs/dist/system.js"></script>
+        <script>
+        System.config({
+            transpiler: 'typescript'
+        });
+        System
+            .import('app.ts')
+            .then(null, console.error.bind(console));
+  </script>
+    </head>
+    <body>
+         <div id="app">
+             <span>{{simpleValue}}</span>
+             <button type="" onClick="changeValue()"></button>
+         </div>
+    </body>
+</html>
