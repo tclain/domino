@@ -1,11 +1,17 @@
-import domino from '../src';
+import domino from '../src/index.ts';
 
-export default function app(){
+
     const app = new domino("#app", {
-        value : "test"
+        value : "une super valeur"
     }, {
         changeValue(value){
             this.value = 2
         }
     });
-}
+
+    const app2 = new domino("#app2", {
+        value : "une super valeur 2"
+    });
+
+
+
