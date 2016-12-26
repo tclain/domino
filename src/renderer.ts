@@ -30,8 +30,7 @@ export default class Renderer{
      * 
      * @memberOf Renderer
      */
-    public render(data:Object) : void {
-        // TODO: can dom get changed ?
+    public render(data:Object) : void { 
         this.dom.innerHTML = this.interpolate(this.template, data);
     }
     /**
@@ -45,13 +44,11 @@ export default class Renderer{
      * @memberOf Renderer
      */
     private interpolate(str:string, data:Object) : string{
-        console.log(str, data);
         for (let key in data){     
             str = str.replace(`{{${key}}}`, data[key])
         }
-        
+        // replace {{vars}}
         str = str.replace(/\\{\\{.*\\}\\}/, "");
-        console.log(str.match(/\\{\\{.*\\}\\}/))
         return str;
     }
 }
